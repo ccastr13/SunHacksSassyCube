@@ -1,4 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import Speech from 'speak-tts';
+
+const TimerWrapper = styled.div`
+  font-size: 48px;
+`;
+
+var triggerSpeak = (message) => {
+    const speech = new Speech() // will throw an exception if not browser supported
+    speech.speak({
+        text: message, 
+    }).then(() => {
+        console.log("Success !")
+    }).catch(e => {
+        console.error("An error occurred :", e)
+    })
+}
 
 class Timer extends Component {
     
@@ -6,12 +23,18 @@ class Timer extends Component {
       super(props)
       this.state = {count: 1}
     }
+
     componentWillUnmount () {
       clearInterval(this.timer)
     }
+
     tick () {
+      if(this.state.count % 10 === 0) {
+        triggerSpeak('Oh... You couldn\'t solve me? ... How useless.')
+      }
       this.setState({count: (this.state.count + 1)})
     }
+
     startTimer () {
       clearInterval(this.timer)
       this.timer = setInterval(this.tick.bind(this), 1000)
@@ -19,18 +42,17 @@ class Timer extends Component {
     stopTimer () {
       clearInterval(this.timer)
     }
+    componentDidMount() {
+      this.startTimer();
+    }
+
     render () {
       return (
-        <div className='timer'>
+        <TimerWrapper>
           <h1>{this.state.count}</h1>
-          <div>
-            <button onClick={this.startTimer.bind(this)}>Start</button>
-            <button onClick={this.stopTimer.bind(this)}>Stop</button>
-          </div>
-        </div>
+        </TimerWrapper>
       )
     }
   }
 
 export default Timer;
-  

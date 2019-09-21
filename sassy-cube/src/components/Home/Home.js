@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CubeContainer from '../CubeContainer';
-import '../../Voice.js';
 import Timer from '../Timer/Timer';
 import {
   HomeWrapper

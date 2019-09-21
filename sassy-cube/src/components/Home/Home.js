@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CubeContainer from '../CubeContainer';
 
 import {
   HomeWrapper
@@ -8,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <HomeWrapper>
-        
+        <CubeContainer />
       </HomeWrapper>
     );
   }

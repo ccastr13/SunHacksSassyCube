@@ -16,10 +16,9 @@ class Header extends Component {
 
 
         <HeaderContent>
-          <HeaderLink to='/'>Home</HeaderLink>
-          <HeaderLink to='/'>Name 1</HeaderLink>
-          <HeaderLink to='/'>Name 2</HeaderLink>
-          <HeaderLink to='/'>Name 3</HeaderLink>
+          <HeaderLink to='/'>Khannur Sewnyay</HeaderLink>
+          <HeaderLink to='/'>Sinteauh Katzrowe</HeaderLink>
+          <HeaderLink to='/'>Reeee-anin Salkayduh</HeaderLink>
         </HeaderContent>
       </HeaderWrapper>
     );

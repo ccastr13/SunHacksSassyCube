@@ -16,9 +16,9 @@ class Header extends Component {
 
 
         <HeaderContent>
-          <HeaderLink to='/'>Khannur Sewnyay</HeaderLink>
-          <HeaderLink to='/'>Sinteauh Katzrowe</HeaderLink>
-          <HeaderLink to='/'>Reeee-anin Salkayduh</HeaderLink>
+          <HeaderLink to='/'>Connor Sonnier</HeaderLink>
+          <HeaderLink to='/'>Cynthia Castro</HeaderLink>
+          <HeaderLink to='/'>Rhiannon Salceda</HeaderLink>
         </HeaderContent>
       </HeaderWrapper>
     );
